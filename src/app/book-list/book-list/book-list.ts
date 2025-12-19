@@ -18,7 +18,8 @@ export class BookList {
   ngOnInit() {  
     this.demoService.getAllBooks().subscribe((data) => {
       // this.books = data;
-      data.array.forEach((element: any)  => {
+      if(data && data.length > 0 ) {
+        data.forEach((element: any)  => {
         this.books.push({
           id: element.id,
           title: element.title,
@@ -27,7 +28,9 @@ export class BookList {
         });
       });
       
-      console.log('Books data:', data);
+      }
+      
+      // console.log('Books data:', data);
     });
 
     const bookObject = {id:5,price:10.00,publishDate:"2024-04-15",title:"carnegie"};
