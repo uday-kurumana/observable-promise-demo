@@ -1,0 +1,48 @@
+{
+  "gradauation": "Yes",
+  "Name": "John Doe",
+  "age": 28,
+  "skills": [
+    {
+      "skill": "Angular",
+      "level": "intermediate",
+      "yearsOfExperience": 2,
+      "skills": [
+        {
+          "skill": "Angular",
+          "level": "intermediate",
+          "yearsOfExperience": 2,
+          "skills": [
+            {
+              "skill": "JavaScript",
+              "level": "advanced",
+              "yearsOfExperience": 4,
+              "skills": [
+                {
+                  "skill": "Angular",
+                  "level": "intermediate",
+                  "yearsOfExperience": 2
+                },
+                {
+                  "skill": "TypeScript",
+                  "level": "intermediate",
+                  "yearsOfExperience": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "skill": "TypeScript",
+          "level": "intermediate",
+          "yearsOfExperience": 2
+        }
+      ]
+    },
+    {
+      "skill": "TypeScript",
+      "level": "intermediate",
+      "yearsOfExperience": 2
+    }
+  ]
+}

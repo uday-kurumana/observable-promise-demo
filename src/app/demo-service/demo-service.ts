@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
+import { environment } from '../../env/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,8 @@ import { map, Observable } from 'rxjs';
   
 })
 export class DemoService {
+ 
+  apiURL = environment.apiUrl;
 
   // apiUrl = 'http://localhost:8080/api';
 
@@ -28,24 +31,35 @@ export class DemoService {
   })  ); 
   }
 
-  createBook(bookData: any): Observable<any> {
-    
-    const book = bookData;
+  // responseEntity = {
+  //   status: 200,
+  //   data: Book[]
+  // }
 
+  createBook(bookData: any): Observable<any> {
+    const book = bookData;
     return this.http.post(`/api/postbooks`, book);
   }
-    
+
+  getUserId(bookId: string): Observable<any> {
+    return this.http.get(`/api/books/${bookId}`).pipe(map((response: any) => {
+      if(response) {
+      return response;
+    } else
+    return null 
+  })  );
 
 }
-
-{
-  status: 200
-  data: [
-    {
-
-  }
-]
 }
+
+// {
+//   status: 200
+//   data: [
+//     {
+
+//   }
+// ]
+// }
 
 
 
