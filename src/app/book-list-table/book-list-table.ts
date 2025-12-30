@@ -15,6 +15,7 @@ export class BookListTableComponent {
 
   ngOnInit() {
     this.books = this.activatedRoute.snapshot.data['books'];
+    
     console.log('Resolved books data:', this.books);
     // this.book = this.activatedRoute.snapshot.data['book'];
     // console.log('Resolved book data:', this.book);

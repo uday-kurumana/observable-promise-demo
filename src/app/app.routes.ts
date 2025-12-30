@@ -7,7 +7,7 @@ export const routes: Routes = [
         loadComponent: () => import('./book-list-table/book-list-table').then(m => m.BookListTableComponent),
         resolve: {
             books: booksResolver,
-            // book: getBookByIdResolver
+            book: getBookByIdResolver
         }
     }
 ];

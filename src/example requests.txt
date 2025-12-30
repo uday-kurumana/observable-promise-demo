@@ -1,0 +1,42 @@
+https://www.bata.com/in/men/shoes/hush-puppies/blue+brown+grey+yellow/7/
+
+https://www.bata.com/
+https://www.bata.com/in
+https://www.bata.com/in/men
+https://www.bata.com/in/men/shoes:path variables
+
+string.token
+
+let sentence = "hush-puppies/blue+brown+grey+yellow/7";
+let tokens = sentence.split("/");
+
+hush-puppies
+brand= 
+blue+brown+grey+yellow
+colors= {"blue", "brown", "grey", "yellow"}
+7
+console.log(tokens);
+
+
+brand === tokens[0]; // hush-puppies for loop
+color === tokens[1]; // blue+brown+grey+yellow for loop
+
+this.books = this.activatedRoute.snapshot.data['books'];
+this.activatedRoute.params
+this.activatedRoute.queryParams
+
+
+?prefn1=discountPercent&prefv1=from%2041%20to%2050%25%7Cfrom%2061%20to%2070%25&prefn2=gender&prefv2=003
+
+get
+https://www.bata.com/in/men/shoes/hush-puppies/blue+brown+grey+yellow/7/?prefn1=discountPercent&prefv1=from%2041%20to%2050%25%7Cfrom%2061%20to%2070%25&prefn2=gender&prefv2=003
+
+https://www.bata.com/in/men/shoes
+post
+{
+    brand: "hush-puppies",
+    color: {"blue", "brown", "grey", "yellow"},
+    size: {7,8,9},
+    discounts: {lowervalue:{20,40}, uppervalue: {30,50}},
+    gender: male
+}
